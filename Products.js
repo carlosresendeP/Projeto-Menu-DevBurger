@@ -22,7 +22,7 @@ const menuOptions = [
 
     { name: 'Batata Frita', price: 15, vegan: true, src: './img/batata-frita.jpg' },
 
-    { name: 'Onion Rings', price: 18, vegan: true, src: './img/onion-rings.jpg' },
+    { name: 'Onion Rings', price: 18, vegan: true, src: './img/Onion-rings.jpg' },
 
     { name: 'Taco de Carne', price: 37, vegan: false, src: './img/taco-carne.jpg' },
 
