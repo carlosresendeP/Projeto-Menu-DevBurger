@@ -1,0 +1,154 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --text-color:#ecf0f1;
+    --text-scondary-color: #000f1f;
+    --background-color: #34495e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--text-color);
+    transition: background-color 0.5s ease;
+}
+
+.side-bar{
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: 5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
+    transition: all 0.5s cubic-bezier(.68,-0.55,0.27,1.55);
+
+}
+
+.side-bar.active{
+    left: 0;
+}
+
+.side-bar ul{
+    list-style-type: none;
+
+    margin-top: 60px;
+}
+
+.side-bar ul li{
+    padding:  15px 30px;
+
+}
+
+.side-bar ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.side-bar ul li a i{
+    font-size: 24px;
+}
+
+.side-bar ul li:hover{
+    background-color: var(--secondary-color);
+}
+
+.side-bar ul li a i:hover{
+    transform: translateX(5px) rotate(5deg);
+}
+
+.menu-button{
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 6;
+    border-radius: 5px;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.5 ease;
+}
+
+
+.menu-button:hover{
+    background-color: var(--secondary-color);
+}
+.menu-button.active{
+    left: 320px;
+}
+
+.content{
+    margin-left: 80px;
+    padding: 40px;
+    color: var(--text-scondary-color);
+    background-color: var(--text-color);
+    transition: all 0.5s ease;
+
+}
+
+.content.active{
+    margin-left: 320px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.content p {
+    color: var(--text-scondary-color);
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.background.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.content .buutons-main{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.content .button-procucts{
+    padding: 20px 25px;
+    margin-top: 50px;
+    background-color: var(--text-scondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.content .button-procucts:hover{
+    background-color: var(--primary-color);
+    transition: background-color 0.4s ease;
+    transform: translateY(-2px);
+}
+
